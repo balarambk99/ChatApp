@@ -5,6 +5,7 @@ const schema=mongoose.Schema({
     hostpassowrd:{type:String,required:true},
     joinpassword:{type:String,required:true}
 })
+
 const model=mongoose.model("rooms",schema);
 const creatRoom=async(data)=>{
     try{ console.log(data.roomid);
@@ -68,6 +69,8 @@ const checkPassword=async (data)=>{
 
 
 }
+
+
 const changepassword=async (data)=>{
     try{  console.log(data.roomid);
         console.log(" not current room pass");
